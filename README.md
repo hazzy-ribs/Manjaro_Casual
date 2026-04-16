@@ -27,7 +27,7 @@ Para rodar o setup no seu Manjaro, siga estes passos no terminal:
    ```bash
    nano setup.sh
    ```
-**Ou baixe o arquivo e use o passo 2 e 3**
+**Ou baixe o arquivo e use o passo 4 e 5**
 
 2. **Cole o código do script dentro dele:**
   
