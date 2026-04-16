@@ -80,7 +80,7 @@ echo "------------------------------------------------"
 
    ```
   
-3. Salve e saia** (No nano: `Ctrl+O`, `Enter`, `Ctrl+X`).
+3. Salve e saia (No nano: `Ctrl+O`, `Enter`, `Ctrl+X`).
 
 4. **Dê permissão de execução:**
    ```bash
