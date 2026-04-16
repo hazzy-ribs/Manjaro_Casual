@@ -9,7 +9,7 @@ O script está dividido em 6 etapas estratégicas:
 1.  **Otimização de Espelhos (Mirrors):** Localiza os 5 servidores mais rápidos no Brasil e no mundo para que seus downloads e atualizações voem.
 2.  **Atualização Total:** Garante que o sistema e a base de dados do Pacman estejam na versão mais recente.
 3.  **Setup de Softwares:** Instala ferramentas essenciais de trabalho e lazer:
-    * **Google Chrome** & **VS Code** (via AUR/Pamac).
+    * **VS Code** (via AUR/Pamac).
     * **OnlyOffice** (via Flatpak, garantindo compatibilidade total com arquivos MS Office).
     * **VLC Player** (o canivete suíço dos vídeos).
 4.  **ZRAM (O segredo da fluidez):** Configura a compressão de memória RAM em tempo real usando o algoritmo **ZSTD**. Isso permite que seus 4GB de RAM rendam como se fossem quase o dobro, evitando travamentos ao abrir muitas abas.
