@@ -1,1 +1,62 @@
 # Manjaro_Casual
+
+Com certeza! Para um README de GitHub, o ideal é ser direto, visualmente organizado e explicar o "porquê" de cada comando. Isso ajuda tanto o usuário casual quanto o desenvolvedor que quer entender o que está rodando no sistema dele.
+
+Aqui está a estrutura pronta para você copiar e colar:
+
+---
+
+# 🚀 Manjaro Extreme Optimization & Setup
+
+Este script automatiza a configuração inicial e a otimização de performance do **Manjaro KDE**, com foco especial em hardware com **4GB de RAM** e armazenamento limitado. Ele transforma uma instalação limpa em um ambiente de desenvolvimento e uso casual ágil e fluido.
+
+## 🛠️ O que o script faz?
+
+O script está dividido em 6 etapas estratégicas:
+
+1.  **Otimização de Espelhos (Mirrors):** Localiza os 5 servidores mais rápidos no Brasil e no mundo para que seus downloads e atualizações voem.
+2.  **Atualização Total:** Garante que o sistema e a base de dados do Pacman estejam na versão mais recente.
+3.  **Setup de Softwares:** Instala ferramentas essenciais de trabalho e lazer:
+    * **Google Chrome** & **VS Code** (via AUR/Pamac).
+    * **OnlyOffice** (via Flatpak, garantindo compatibilidade total com arquivos MS Office).
+    * **VLC Player** (o canivete suíço dos vídeos).
+4.  **ZRAM (O segredo da fluidez):** Configura a compressão de memória RAM em tempo real usando o algoritmo **ZSTD**. Isso permite que seus 4GB de RAM rendam como se fossem quase o dobro, evitando travamentos ao abrir muitas abas.
+5.  **Ajustes de Performance (KDE Fokus):**
+    * **Desativa o Baloo:** Desliga o indexador de arquivos do KDE que costuma "fritar" o processador em segundo plano.
+    * **Swappiness 10:** Faz o Linux usar a RAM ao máximo antes de tentar usar o disco.
+    * **Preload:** Um serviço que "prevê" o que você vai abrir e pré-carrega na memória.
+6.  **Manutenção de Disco:** Limpa o cache de pacotes antigos para preservar espaço nos seus 120GB de armazenamento.
+
+## 🚀 Como usar
+
+Para rodar o setup no seu Manjaro, siga estes passos no terminal:
+
+1. **Crie o arquivo do script:**
+   ```bash
+   nano setup.sh
+   ```
+
+2. **Cole o código do script dentro dele, salve e saia** (No nano: `Ctrl+O`, `Enter`, `Ctrl+X`).
+
+3. **Dê permissão de execução:**
+   ```bash
+   chmod +x setup.sh
+   ```
+
+4. **Execute o script:**
+   ```bash
+   ./setup.sh
+   ```
+
+5. **Reinicie o sistema:**
+   Após o término, reinicie o computador para que as configurações de memória (ZRAM e Swappiness) entrem em vigor corretamente.
+
+---
+
+## 📋 Requisitos
+* Sistema Operacional: **Manjaro Linux** (Preferencialmente KDE Plasma).
+* Conexão com a internet.
+* Senha de administrador (`sudo`).
+
+---
+**Desenvolvido por:** [harryrib-dev](https://github.com/seu-usuario-aqui) 🛠️
