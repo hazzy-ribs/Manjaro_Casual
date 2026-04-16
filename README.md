@@ -28,19 +28,71 @@ Para rodar o setup no seu Manjaro, siga estes passos no terminal:
    nano setup.sh
    ```
 
-2. **Cole o código do script dentro dele, salve e saia** (No nano: `Ctrl+O`, `Enter`, `Ctrl+X`).
+2. **Cole o código do script dentro dele,
+  
+  ```bash
+   #!/bin/bash
 
-3. **Dê permissão de execução:**
+echo "Buscando os repositórios mais rápidos (Brasil/Global)..."
+
+sudo pacman-mirrors --fasttrack 5
+
+echo "Iniciando atualização completa..."
+sudo pacman -Syu --noconfirm
+
+echo "Instalando softwares solicitados..."
+
+sudo pacman -S --noconfirm vlc flatpak
+pamac build --no-confirm visual-studio-code-bin
+
+flatpak install flathub org.onlyoffice.desktopeditors -y
+
+echo "Configurando ZRAM (Algoritmo ZSTD)..."
+sudo pacman -S --noconfirm zram-generator
+
+sudo bash -c 'cat << EOF > /etc/systemd/zram-generator.conf
+[zram0]
+zram-size = ram / 1
+compression-algorithm = zstd
+swap-priority = 100
+fs-type = swap
+EOF'
+
+sudo systemctl daemon-reload
+sudo systemctl start /dev/zram0
+
+echo "Desativando indexador Baloo para poupar CPU..."
+balooctl6 disable
+
+echo "Ajustando Swappiness para 10..."
+sudo bash -c 'echo "vm.swappiness=10" > /etc/sysctl.d/99-swappiness.conf'
+sudo sysctl -p /etc/sysctl.d/99-swappiness.conf
+
+sudo pacman -S --noconfirm preload
+sudo systemctl enable --now preload
+
+sudo pamac clean --keep 2
+
+echo "------------------------------------------------"
+echo "Setup Concluído! Sistema otimizado e atualizado."
+echo "Reinicie para aplicar todas as mudanças de memória."
+echo "------------------------------------------------"
+
+   ```
+  
+3. Salve e saia** (No nano: `Ctrl+O`, `Enter`, `Ctrl+X`).
+
+4. **Dê permissão de execução:**
    ```bash
    chmod +x setup.sh
    ```
 
-4. **Execute o script:**
+5. **Execute o script:**
    ```bash
    ./setup.sh
    ```
 
-5. **Reinicie o sistema:**
+6. **Reinicie o sistema:**
    Após o término, reinicie o computador para que as configurações de memória (ZRAM e Swappiness) entrem em vigor corretamente.
 
 ---
