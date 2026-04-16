@@ -1,11 +1,3 @@
-# Manjaro_Casual
-
-Com certeza! Para um README de GitHub, o ideal é ser direto, visualmente organizado e explicar o "porquê" de cada comando. Isso ajuda tanto o usuário casual quanto o desenvolvedor que quer entender o que está rodando no sistema dele.
-
-Aqui está a estrutura pronta para você copiar e colar:
-
----
-
 # 🚀 Manjaro Extreme Optimization & Setup
 
 Este script automatiza a configuração inicial e a otimização de performance do **Manjaro KDE**, com foco especial em hardware com **4GB de RAM** e armazenamento limitado. Ele transforma uma instalação limpa em um ambiente de desenvolvimento e uso casual ágil e fluido.
