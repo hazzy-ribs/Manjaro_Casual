@@ -103,4 +103,4 @@ echo "------------------------------------------------"
 * Senha de administrador (`sudo`).
 
 ---
-**Desenvolvido por:** [harryrib-dev](https://github.com/seu-usuario-aqui) 🛠️
+**Desenvolvido por:** [hazzy.ribs](https://www.instagram.com/hazzy.ribs?igsh=MW1qNG1vOGJuNndwbw==) 🛠️
